@@ -22,7 +22,7 @@ pub struct AppState {
     pub rpc_nonblocking_client: Arc<solana_client::nonblocking::rpc_client::RpcClient>,
     pub wallet: Arc<Keypair>,
 }
-//
+
 
 pub fn import_env_var(key: &str) -> String {
     env::var(key).unwrap_or_else(|_| panic!("Environment variable {} not set", key))
@@ -41,6 +41,8 @@ pub async fn create_nonblocking_rpc_client() -> Result<solana_client::nonblockin
         CommitmentConfig::confirmed(),
     ))
 }
+
+ss
 
 pub fn create_rpc_client() -> Result<solana_client::rpc_client::RpcClient> {
     let rpc_url = import_env_var("RPC_HTTPS");
