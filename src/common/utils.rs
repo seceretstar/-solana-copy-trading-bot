@@ -42,8 +42,6 @@ pub async fn create_nonblocking_rpc_client() -> Result<solana_client::nonblockin
     ))
 }
 
-ss
-
 pub fn create_rpc_client() -> Result<solana_client::rpc_client::RpcClient> {
     let rpc_url = import_env_var("RPC_HTTPS");
     Ok(solana_client::rpc_client::RpcClient::new_with_commitment(
