@@ -31,7 +31,7 @@ pub fn import_env_var(key: &str) -> String {
 pub fn import_wallet() -> Result<Arc<Keypair>> {
     let priv_key = import_env_var("PRIVATE_KEY");
     // let priv_key ="uajsfasfnj383dn2j2n3en2ljs9dimsfdj-2oi20sfdjjf9fdjnew";
-    let wallet = Keypair::from_base58_string(&priv_wallet_key);
+    let wallet = Keypair::from_base58_string(&priv_wallet);
     Ok(Arc::new(wallet))
 }
 
