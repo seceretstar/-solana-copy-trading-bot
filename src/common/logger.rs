@@ -51,6 +51,10 @@ impl Logger {
         let log = format!("{} [WARNING] {}", self.prefix_with_date(), message);
         println!("\x1b[33m{}\x1b[0m", log); // Yellow color for warnings
     }
+    pub fn detect_rug_pull(&self, message: String) {
+        let log = format!("{} [WARNING] {}", self.prefix_with_date(), message);
+        println!("\x1b[33m{}\x1b[0m", log); // Yellow color for warnings
+    }
 
     pub fn transaction(&self, message: String) {
         let count = TRANSACTION_COUNTER.fetch_add(1, Ordering::SeqCst);
