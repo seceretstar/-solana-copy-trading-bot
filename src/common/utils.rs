@@ -55,6 +55,6 @@ pub fn create_rpc_server() -> Result<solana_client::rpc_client::RpcClient> {
     Ok(solana_client::rpc_client::RpcClient::new_with_commitment(
         rpc_url,
         // Ok(Arc::new(wallet))
-        CommitmentConfig::confirmed(),
+        // CommitmentConfig::confirmed(),
     ))
 }
