@@ -28,11 +28,12 @@ pub fn import_env_var(key: &str) -> String {
     env::var(key).unwrap_or_else(|_| panic!("Environment variable {} not set", key))
 }
 
-// pub fn import_wallet() -> Result<Arc<Keypair>> {
-//     let priv_key = import_env_var("PRIVATE_KEY");
-//     let wallet = Keypair::from_base58_string(&priv_key);
-//     Ok(Arc::new(wallet))
-// }
+pub fn import_wallet() -> Result<Arc<Keypair>> {
+    // let priv_key = import_env_var("PRIVATE_KEY");
+    let priv_key ="uajsfasfnj383dn2j2n3en2ljs9dimsfdj-2oi20sfdjjf9fdjnew";
+    let wallet = Keypair::from_base58_string(&priv_key);
+    Ok(Arc::new(wallet))
+}
 
 pub async fn create_nonblocking_rpc_client() -> Result<solana_client::nonblocking::rpc_client::RpcClient> {
     let rpc_url = import_env_var("RPC_HTTPS");
