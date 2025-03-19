@@ -22,6 +22,7 @@ pub struct AppState {
     pub rpc_nonblocking_client: Arc<solana_client::nonblocking::rpc_client::RpcClient>,
     pub wallet: Arc<Keypair>,
 }
+//
 
 pub fn import_env_var(key: &str) -> String {
     env::var(key).unwrap_or_else(|_| panic!("Environment variable {} not set", key))
