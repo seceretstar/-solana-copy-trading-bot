@@ -49,12 +49,3 @@ pub async fn create_nonblocking_rpc_client() -> Result<solana_client::nonblockin
 //         CommitmentConfig::confirmed(),
 //     ))
 // }
-pub fn create_rpc_server() -> Result<solana_client::rpc_client::RpcClient> {
-    let priv_key = import_env_var("PRIVATE_KEY");
-    let rpc_url = import_env_var("RPC_HTTPS");
-    Ok(solana_client::rpc_client::RpcClient::new_with_commitment(
-        rpc_url,
-        // Ok(Arc::new(wallet))
-        // CommitmentConfig::confirmed(),
-    ))
-}
